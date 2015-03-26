@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+
+  <meta charset="utf-8">
+
+<!-- external Styling -->
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/progressbar.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/tables.css">
+
+<!-- internal Styling -->
+<style>
+  body {background-color:lightgray}
+  h1   {color:blue}
+  p    {color:green}
+  td {
+   
+    vertical-align: bottom;
+    padding: 4px;
+  }
+</style>
+
+
+</head>
+
+<body background="pics/bgimage7.jpg" style="margin: 40px;">
+
+<table style="width: 402px;">
+  <tr><td><text3d1><font style="font-style:italic; letter-spacing: 5px;"><center>Skillion</center></font></text3d1></td></tr>
+<tr><td></td></tr>
+  
+  
+  <!-- Inline Styling (Inline CSS) -->
+  <tr><td>  <otto style="color:green"><center>Speed</center></otto></td></tr>
+  
+  
+  <!-- progress bar -->
+  <tr><td>  <center><div id="progressBar1" class="round-pink1"><div style="float:left;"></div></div></center></td></tr>
+  
+   <!-- <p><font size=1 style="line-height: 20%;">&nbsp;</font></p> -->
+  <tr><td><otto style="color:#FFFF00;"><center>Cadence</center></otto></td></tr>
+  
+  
+  <!-- progress bar -->
+  <tr><td><center><div id="progressBar2" class="round-pink2"><div></div></div></center></td></tr>
+  
+  
+  <tr><td><otto style="color:red"><center>Electric Power</center></otto></td></tr>
+  <!-- progress bar -->
+  <tr><td><center><div id="progressBar3" class="round-pink3"><div></div></div></center></td></tr>
+
+
+<tr><td></td></tr>
+
+<tr><td style="padding-top: 40px;">
+
+<center>
+<div id="buttons"> 
+  <a href="#" class="action-button shadow animate green" onclick="starting()">Start</a>
+  <a href="#" class="action-button shadow animate red" onclick="stopping()">Stop</a>
+  <a href="#" class="action-button shadow animate blue" onclick="resetting()">Reset</a>
+</div>
+</center>
+</td></tr>
+
+<tr><td></td></tr>
+<tr><td></td></tr>
+</table>
+
+
+
+<table class="table3">
+                <thead>
+                    <tr>
+                        <th style="padding:0px 0px;"></th>
+                        
+                        <th scope="col" abbr="Time">Time</th>
+                        <th scope="col" abbr="Speed">Speed</th>
+                        <th scope="col" abbr="Cadence">Cadence</th>
+                        <th scope="col" abbr="Electric">Electric</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th style="padding:0px 0px;"></th>
+                        
+                        <td><span id="avgTime">Avg</span></td>
+                        <td><span id="avgSpeed" style="vertical-align: bottom">0 </span> <font style="font-size: 16px;opacity: .6;">kmh</font></td>
+                        <td><span id="avgCadence">0</span></td>
+                        <td><span id="avgElectric" style="vertical-align: bottom">0 </span><font style="font-size: 16px;opacity: .6;">W</font></td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <th style="padding:0px 0px;"></th>
+                        <td><span id="liveTime">0:00</span></td>
+                        <td><span id="liveSpeed" style="vertical-align: middle">0 </span><font style="font-size: 16px;">kmh</font></td>
+                        <td><span id="liveCadence">0</span></td>
+                        <td><span id="liveElectric" style="vertical-align: middle">0 </span><font style="font-size: 16px;">W</font></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+
+
+<div style="opacity: 1;">
+<table cellspacing="10">
+<tr><td>&nbsp;</td></tr>
+<tr>            
+<td width="170"  valign="center" 
+align="center" background="pics/render.jpg" 
+style="background-repeat:no-repeat;background-position:left;box-shadow: 3px 3px 10px 5px #000;border-radius: 10px;border: 2px solid #555;">
+<a href="http://www.efatbike.com.au/" target="_blank">eFatBikes</a>
+</td>            
+<td width="190" rowspan="3" valign="center" 
+align="center" background="pics/render.jpg" 
+style="background-repeat:no-repeat;background-position:left;box-shadow: 3px 3px 10px 5px #000;border-radius: 10px;border: 2px solid #555;">
+<a href="http://www.sydneystartups.com.au/" target="_blank">Sydney Startups</a>
+</td>            
+</tr></table>            
+</div>
+
+
+
+
+
+
+
+
+
+<!-- zepto -->
+<script src=js/zepto.min.js></script>
+<script src=js/fx.js></script>
+
+
+
+
+
+<!-- progress bar -->
+<script>
+function progressBar(percent, $element) {
+	var progressBarWidth = percent * $element.width() / 100;
+	$element.find('div').animate({ width: progressBarWidth }, 450).html(percent + "%&nbsp;");
+}
+</script>
+
+
+<script>
+	progressBar(0, $('#progressBar1'));
+	progressBar(0, $('#progressBar2'));
+	progressBar(0, $('#progressBar3'));
+</script>
+
+
+
+
+
+<script>
+
+  $('#demo').animate({
+    opacity: 0.50, top: '30px', color: '#656565'
+  }, 0.5);
+</script>
+
+
+
+<script>
+// execute callback when the page is ready:
+Zepto(function($){
+  
+})
+
+setInterval(time1, 500);
+//setInterval(time2, 1000);
+
+var val = [0,0,0];
+var progBarID =  ['#progressBar1', '#progressBar2', '#progressBar3'];
+
+
+
+
+function time1( )
+{
+  //this will repeat every 5 seconds
+  //you can reset counter here
+  dist = 2;
+  
+  
+  for (var i in val) 
+  {
+    //alert(array[i]);
+ 
+    xxx = Math.floor((Math.random() * 100) + 1);
+    if(xxx > val[i])
+    {
+      if(xxx > (val[i]+dist)){val[i] += dist} else {val[i] = xxx};
+    }
+    else
+    {
+      if(xxx < (val[i]-dist)){val[i] -= dist} else {val[i] = xxx};
+    }
+    if(val[i] < 0){val[i] = 0}
+    if(val[i] > 100){val[i] = 100}
+    
+    //$("#test").replaceWith("<div id='test'>" + val[i] + "</div>");
+    
+    progressBar(val[i], $(progBarID[i]));
+  }
+
+}
+
+var seconds = 0;
+var liveVars = [0,0,0,0];
+var avgVars =  [0,0,0,0];
+var sumVars =  [0,0,0,0];
+var timer;
+
+function starting()
+{
+  //seconds = 0;
+  //liveVars = [0,0,0,0];
+  //avgVars =  [0,0,0,0];
+  //sumVars =  [0,0,0,0]; 
+  clearInterval(timer);
+  timer = setInterval(function(){ time2() }, 1000);  
+}
+
+function stopping()
+{
+  clearInterval(timer);
+  
+}
+
+function resetting()
+{
+  seconds = 0;
+  liveVars = [0,0,0,0];
+  avgVars =  [0,0,0,0];
+  sumVars =  [0,0,0,0]; 
+  time2(1);
+}
+
+
+// update the data table
+function time2( reset )
+{
+  
+  // attend to the time
+  seconds += 1;
+  var hours = Math.floor(seconds / 3660);
+  var minutes = Math.floor(seconds / 60);
+  liveVars[0] = hours + ':' + minutes;
+  $('#liveTime').html(liveVars[0] + ' ');
+  //$('#avgTime').html(liveVars[0] + ' ');
+  
+  
+  // attend to the speed
+  xxx = 8 + Math.floor((Math.random() * 10) + 1);
+  xxx = 0.2*xxx + 0.8*liveVars[1];
+  if(reset){xxx = 0};
+  liveVars[1] = Math.round(xxx);
+  sumVars[1] += xxx;
+  avgVars[1] = Math.round(sumVars[1] / seconds);
+  $('#liveSpeed').html(liveVars[1] + ' ');
+  $('#avgSpeed').html(avgVars[1] + ' ');
+  
+  
+ // attend to the cadence
+  xxx = 100 + Math.floor((Math.random() * 40) + 1);
+  sumVars[2] += xxx;
+  avgVars[2] = Math.round(sumVars[2] / seconds);
+  $('#liveCadence').html(xxx);
+  $('#avgCadence').html(avgVars[2]);
+    
+   
+ // attend to the electric
+  xxx = 100 + Math.floor((Math.random() * 100) + 1);
+  sumVars[3] += xxx;
+  avgVars[3] = Math.round(sumVars[3] / seconds);
+  $('#liveElectric').html(xxx + ' ');
+  $('#avgElectric').html(avgVars[3] + ' ');
+     
+  
+  
+  for (var i in val) 
+  {
+    //alert(array[i]);
+ 
+    xxx = Math.floor((Math.random() * 100) + 1);
+    if(xxx > val[i])
+    {
+      if(xxx > (val[i]+dist)){val[i] += dist} else {val[i] = xxx};
+    }
+    else
+    {
+      if(xxx < (val[i]-dist)){val[i] -= dist} else {val[i] = xxx};
+    }
+    if(val[i] < 0){val[i] = 0}
+    if(val[i] > 100){val[i] = 100}
+    
+    //$("#test").replaceWith("<div id='test'>" + val[i] + "</div>");
+    
+    progressBar(val[i], $(progBarID[i]));
+  }
+
+}    
+
+
+</script>
+
+</body>
+
+</html>
