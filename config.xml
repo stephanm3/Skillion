@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8> ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
@@ -14,6 +14,9 @@
     <author href="http://phonegap.com" email="stephan.meyer.oz@gmail.com">
         Stephan Meyer
     </author>
+
+    <content src="index.html" />
+
 
     <!--
         If you do not want any permissions to be added to your app, add the
