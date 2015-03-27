@@ -34,8 +34,8 @@
 
 
 #progressBar1, #progressBar2, #progressBar3{
-        width: 400px;
-        height: 22px;
+        width: 240px;
+        height: 18px;
         border: 1px solid #111;
         background-color: #292929;
 }

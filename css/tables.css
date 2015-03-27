@@ -163,9 +163,9 @@ table.table2{
 
 /* Table 3 Style */
 table.table3{
-  width: 402px;
+  width: 250px;
     font-family:Arial;
-    font-size: 18px;
+    font-size: 10px;
     font-style: normal;
     font-weight: normal;
     text-transform: uppercase;
@@ -226,14 +226,14 @@ table.table3{
     border-bottom-right-radius:5px;
 }
 .table3 tfoot td{
-    font-size:38px;
+    font-size:20px;
     font-weight:bold;
     padding:15px 0px;
     text-shadow:1px 1px 1px #fff;
 }
 .table3 tbody td{
     padding:10px;
-    font-size:28px;
+    font-size:22px;
 }
 .table3 tbody tr:nth-child(4) td{
     font-size:56px;
