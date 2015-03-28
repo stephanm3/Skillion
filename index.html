@@ -28,32 +28,32 @@
 
 <body background="pics/bgimage7.jpg" style="margin: 5px;">
 
-<table style="width: 200px;">
-  <tr><td><text3d1><font style="font-style:italic; letter-spacing: 10px;"><center>Skillion</center></font></text3d1></td></tr>
-<tr><td style="padding-top: 1px;"></td></tr>
+<table style="width: 250px;">
+  <tr><td style="padding-top: 0px;"><text3d1><font style="font-style:italic; letter-spacing: 10px;"><center>Skillion</center></font></text3d1></td></tr>
+<tr><td style="padding-top: 0px; padding-bottom: 0px"></td></tr>
   
   
   <!-- Inline Styling (Inline CSS) -->
-  <tr><td>  <otto style="color:green"><center>Speed</center></otto></td></tr>
+  <tr><td style="padding-top: 0px; padding-bottom: 0px">  <otto style="color:green"><center>Speed</center></otto></td></tr>
   
   
   <!-- progress bar -->
   <tr><td>  <center><div id="progressBar1" class="round-pink1"><div style="float:left;"></div></div></center></td></tr>
   
    <!-- <p><font size=1 style="line-height: 20%;">&nbsp;</font></p> -->
-  <tr><td><otto style="color:#FFFF00;"><center>Cadence</center></otto></td></tr>
+  <tr><td style="padding-top: 0px; padding-bottom: 0px"><otto style="color:#FFFF00;"><center>Cadence</center></otto></td></tr>
   
   
   <!-- progress bar -->
   <tr><td><center><div id="progressBar2" class="round-pink2"><div></div></div></center></td></tr>
   
   
-  <tr><td><otto style="color:red"><center>Electric Power</center></otto></td></tr>
+  <tr><td style="padding-top: 0px; padding-bottom: 0px"><otto style="color:red"><center>Electric Power</center></otto></td></tr>
   <!-- progress bar -->
   <tr><td><center><div id="progressBar3" class="round-pink3"><div></div></div></center></td></tr>
 
 
-<tr><td></td></tr>
+<tr><td style="padding-top: 0px; padding-bottom: 0px"></td></tr>
 
 <tr><td style="padding-top: 20px;">
 
@@ -66,8 +66,8 @@
 </center>
 </td></tr>
 
-<tr><td></td></tr>
-<tr><td></td></tr>
+<tr><td style="padding-top: 5px; padding-bottom: 5px"></td></tr>
+
 </table>
 
 
@@ -88,18 +88,18 @@
                         <th style="padding:0px 0px;"></th>
                         
                         <td><span id="avgTime">Avg</span></td>
-                        <td><span id="avgSpeed" style="vertical-align: bottom">0 </span> <font style="font-size: 10px;opacity: .6;">kmh</font></td>
+                        <td><span id="avgSpeed" style="vertical-align: bottom">0 </span> <font style="font-size: 8px;opacity: .6;">kmh</font></td>
                         <td><span id="avgCadence">0</span></td>
-                        <td><span id="avgElectric" style="vertical-align: bottom">0 </span><font style="font-size: 10px;opacity: .6;">W</font></td>
+                        <td><span id="avgElectric" style="vertical-align: bottom">0 </span><font style="font-size: 8px;opacity: .6;">W</font></td>
                     </tr>
                 </tfoot>
                 <tbody>
                     <tr>
                         <th style="padding:0px 0px;"></th>
                         <td><span id="liveTime">0:00</span></td>
-                        <td><span id="liveSpeed" style="vertical-align: middle">0 </span><font style="font-size: 10px;">kmh</font></td>
+                        <td><span id="liveSpeed" style="vertical-align: middle">0 </span><font style="font-size: 8px;">kmh</font></td>
                         <td><span id="liveCadence">0</span></td>
-                        <td><span id="liveElectric" style="vertical-align: middle">0 </span><font style="font-size: 10px;">W</font></td>
+                        <td><span id="liveElectric" style="vertical-align: middle">0 </span><font style="font-size: 8px;">W</font></td>
                     </tr>
                 </tbody>
             </table>
@@ -110,15 +110,15 @@
 
 <div style="opacity: 1;">
 <table cellspacing="10">
-<tr><td>&nbsp;</td></tr>
+<tr><td style="padding-top: 5px; padding-bottom: 5px"></td></tr>
 <tr>            
 <td width="95"  valign="center" 
-align="center" background="pics/render.jpg" 
+align="center" background="pics/smallGradient.jpg" 
 style="background-repeat:no-repeat;background-position:left;box-shadow: 3px 3px 10px 5px #000;border-radius: 10px;border: 2px solid #555;">
 <a href="http://www.efatbike.com.au/" target="_blank">eFatBikes...</a>
 </td>            
 <td width="105" rowspan="3" valign="center" 
-align="center" background="pics/render.jpg" 
+align="center" background="pics/smallGradient.jpg" 
 style="background-repeat:no-repeat;background-position:left;box-shadow: 3px 3px 10px 5px #000;border-radius: 10px;border: 2px solid #555;">
 <a href="http://www.sydneystartups.com.au/" target="_blank">Sydney Startups</a>
 </td>            
@@ -256,6 +256,7 @@ function time2( reset )
   var minutes = Math.floor(seconds / 60);
   liveVars[0] = hours + ':' + minutes;
   $('#liveTime').html(liveVars[0] + ' ');
+  $('#liveTime').style = "color: blue;";
   //$('#avgTime').html(liveVars[0] + ' ');
   
   
@@ -286,27 +287,7 @@ function time2( reset )
   $('#avgElectric').html(avgVars[3] + ' ');
      
   
-  
-  for (var i in val) 
-  {
-    //alert(array[i]);
  
-    xxx = Math.floor((Math.random() * 100) + 1);
-    if(xxx > val[i])
-    {
-      if(xxx > (val[i]+dist)){val[i] += dist} else {val[i] = xxx};
-    }
-    else
-    {
-      if(xxx < (val[i]-dist)){val[i] -= dist} else {val[i] = xxx};
-    }
-    if(val[i] < 0){val[i] = 0}
-    if(val[i] > 100){val[i] = 100}
-    
-    //$("#test").replaceWith("<div id='test'>" + val[i] + "</div>");
-    
-    progressBar(val[i], $(progBarID[i]));
-  }
 
 }    
 
