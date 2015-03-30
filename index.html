@@ -26,7 +26,7 @@
 
 </head>
 
-<body background="pics/bgimage7.jpg" style="margin: 5px;">
+<body id="bodyID" background="pics/bgimage7.jpg" style="margin: 5px;">
 
 <table style="width: 250px;">
   <tr><td style="padding-top: 0px;"><text3d1><font style="font-style:italic; letter-spacing: 10px;"><center>Skillion</center></font></text3d1></td></tr>
@@ -137,9 +137,20 @@ style="background-repeat:no-repeat;background-position:left;box-shadow: 3px 3px 
 <script src=js/zepto.min.js></script>
 <script src=js/fx.js></script>
 
+<script>
+var con=document.getElementById('bodyID');
 
-
-
+con.addEventListener('gesturechange',function(e){
+    if(e.scale>1)
+    {
+        //zoom in 
+    }
+    else if(e.scale<1)
+    {
+        //zoom out 
+    }
+});
+</script>
 
 <!-- progress bar -->
 <script>
