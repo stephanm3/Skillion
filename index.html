@@ -4,7 +4,7 @@
   <title>Page Title</title>
 
   <meta charset="utf-8">
-
+  <meta name="viewport"  content="width=device-width, height=device-height, initial-scale=0.8, user-scalable=1" />
 <!-- external Styling -->
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/progressbar.css">
@@ -113,12 +113,12 @@
 <tr><td style="padding-top: 5px; padding-bottom: 5px"></td></tr>
 <tr>            
 <td width="95"  valign="center" 
-align="center" background="pics/smallGradient.jpg" 
+align="center" background="pics/bgimage7.jpg" 
 style="background-repeat:no-repeat;background-position:left;box-shadow: 3px 3px 10px 5px #000;border-radius: 10px;border: 2px solid #555;">
 <a href="http://www.efatbike.com.au/" target="_blank">eFatBikes...</a>
 </td>            
 <td width="105" rowspan="3" valign="center" 
-align="center" background="pics/smallGradient.jpg" 
+align="center" background="pics/bgimage7.jpg" 
 style="background-repeat:no-repeat;background-position:left;box-shadow: 3px 3px 10px 5px #000;border-radius: 10px;border: 2px solid #555;">
 <a href="http://www.sydneystartups.com.au/" target="_blank">Sydney Startups</a>
 </td>            
@@ -252,10 +252,14 @@ function time2( reset )
   
   // attend to the time
   seconds += 1;
-  var hours = Math.floor(seconds / 3660);
+  var hours = Math.floor(seconds / 3600);
   var minutes = Math.floor(seconds / 60);
+  var minutes = Math.floor(minutes % 60);
   liveVars[0] = hours + ':' + minutes;
-  $('#liveTime').html(liveVars[0] + ' ');
+  if(seconds % 2)
+    {$('#liveTime').html('<font style="color: blue"> ' + liveVars[0] + "<font>");} 
+  else  
+    {$('#liveTime').html('<font style="color: #444"> ' + liveVars[0] + "<font>");} 
   $('#liveTime').style = "color: blue;";
   //$('#avgTime').html(liveVars[0] + ' ');
   
