@@ -5,20 +5,18 @@ h3 {
     margin:30px;
 }
 
+
 otto {
 
-  font-size: 20px;
+  font-size: 18px;
   font-family: Comic Sans MS;
-  font-weight: bold;
+  font-weight: normal;
+  color:#555;
   color: red;   
     margin-top: 20px;
 
-  text-shadow: 0 1px 0 #ccc,
-               0 2px 0 #c9c9c9,
-               0 3px 0 #bbb,
-               0 4px 0 #b9b9b9,
-               0 5px 0 #aaa,
-               0 6px 1px rgba(0,0,0,.1),
+  text-shadow: 1px 1px 1px #555,
+             
                0 0 5px rgba(0,0,0,.1),
                0 1px 3px rgba(0,0,0,.3),
                0 3px 5px rgba(0,0,0,.2),
@@ -65,10 +63,14 @@ otto {
 
 text3d1 {
 
-  font-size: 50px;
+  font-size: 25px;
   font-weight: bold;
   color: #0066FF;   
-  
+  font-style:italic; 
+  letter-spacing: 10px;
+  width:100%;
+    text-align:center;
+
   text-shadow: 0 1px 0 #ccc,
                0 2px 0 #c9c9c9,
                0 3px 0 #bbb,
@@ -86,13 +88,22 @@ text3d1 {
 
    h4 {
         position: relative;
-        font-size: 30px;
+        font-size: 90px;
+		color: #777;
+		text-shadow: 0 3px 0 white;
         margin-top: 0;
         font-family: 'Lobster', helvetica, arial;
+		
+		<!-- vertically align -->
+		 position: relative;
+         top: 50%;
+        -webkit-transform: translateY(-50%);
+		
     }
      
     h4 a {
         text-decoration: none;
+		font-size: 10px;
         color: #666;
         position: absolute;
          
@@ -100,7 +111,8 @@ text3d1 {
     }
      
     h4:after {
-        content : 'Hello World';
+        content : 'kmh';
+				font-size: 10px;
         color: #d6d6d6;
         text-shadow: 0 3px 0 white;
     }
@@ -127,3 +139,68 @@ h5 {
    -webkit-text-fill-color: transparent;
 }
 
+
+
+.shadowSheet {
+
+    height: 120px;
+	margin-top: 20px;
+	width:82%;
+    text-align:center;
+	background: -webkit-linear-gradient(left, #eee , #ddf, #eee);
+
+    box-shadow: 10px 25px 35px #68a;
+	
+
+	border: 2px solid #a1a1a1;
+	border-radius: 7px;
+	border-style: double;
+}
+.blackBand{
+
+    height: 18px;
+	margin-top: 15px;
+	font-size: 14px;
+    width: 100% ;
+    margin-left: auto;
+    margin-right: auto;
+	color: orange;
+	
+	
+	
+
+    text-align:center;
+	background: -webkit-linear-gradient(left, #000 , #000, #000);
+
+    box-shadow: 10px 25px 35px #666;
+	
+
+	border: 2px solid #a1a1a1;
+	border-radius: 4px;
+	
+}
+
+
+.shadowSheetThin {
+
+    height: 22px;
+	margin-top: 15px;
+	
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+	
+	
+	
+	
+
+    text-align:center;
+	background: -webkit-linear-gradient(left, #eee , #ddf, #eee);
+
+    box-shadow: 10px 25px 35px #666;
+	
+
+	border: 2px solid #a1a1a1;
+	border-radius: 4px;
+	
+}

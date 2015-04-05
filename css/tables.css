@@ -163,7 +163,16 @@ table.table2{
 
 /* Table 3 Style */
 table.table3{
-  width: 250px;
+
+   /* center horizontally  */
+    width: 90%;
+  
+     margin-left: auto;
+    margin-right: auto;
+    
+  
+  
+  
     font-family:Arial;
     font-size: 10px;
     font-style: normal;
@@ -229,7 +238,7 @@ table.table3{
     font-size:20px;
     font-weight:bold;
     padding:15px 0px;
-    text-shadow:1px 1px 1px #fff;
+    text-shadow:1px 1px 1px #ccf;
 }
 .table3 tbody td{
     padding:10px;
@@ -280,13 +289,13 @@ table.table3{
     text-shadow:1px 1px 1px #000;
 }
 .table3 tbody td:nth-last-child(1){
-    border-right:1px solid #222;
+    /*border-right:1px solid #222;*/
 }
 .table3 tbody th{
     color:#696969;
     text-align:right;
     padding:0px 10px;
-    border-right:1px solid #aaa;
+     border-right:1px solid #aaa; 
 }
 .table3 tbody span.check::before{
     content : url(../images/check2.png)

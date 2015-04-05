@@ -20,91 +20,71 @@
          }
       </style>
    </head>
-   <body id="bodyID"; 
-      background="pics/road1.jpg"
-      style="margin: 0px;background-repeat: no-repeat; background-size: 100% 100%;">
-      <table style="width: 100%; border: 0px ">
-         <!-- the company name -->
+   <body id="bodyID" background="pics/bgimage7.jpg" style="margin: 5px;">
+      <table style="width: 250px;">
          <tr>
-            <td style="padding-top: 0px; background: -webkit-linear-gradient(#444, #ccc);">
+            <td style="padding-top: 0px;">
                <text3d1>
-                  <center>Skillion</center>
+                  <font style="font-style:italic; letter-spacing: 10px;">
+                     <center>Skillion</center>
+                  </font>
                </text3d1>
             </td>
-            <!-- empty row -->	
          </tr>
          <tr>
             <td style="padding-top: 0px; padding-bottom: 0px"></td>
          </tr>
-         <!-- info box -->
+         <!-- Inline Styling (Inline CSS) -->
          <tr>
             <td style="padding-top: 0px; padding-bottom: 0px">
+               <otto style="color:green">
+                  <center>Speed</center>
+               </otto>
+            </td>
+         </tr>
+         <!-- progress bar -->
+         <tr>
+            <td>
                <center>
-                  <div class="shadowSheet"  >
-                     <h4>7.77</h4>
+                  <div id="progressBar1" class="round-pink1">
+                     <div style="float:left;"></div>
                   </div>
                </center>
             </td>
+         </tr>
+         <!-- <p><font size=1 style="line-height: 20%;">&nbsp;</font></p> -->
+         <tr>
+            <td style="padding-top: 0px; padding-bottom: 0px">
+               <otto style="color:#FFFF00;">
+                  <center>Cadence</center>
+               </otto>
+            </td>
+         </tr>
+         <!-- progress bar -->
          <tr>
             <td>
-               <table width="100%" style="width: 100%; border: 0px;">
-                  <tr width="100%" >
-                     <td padding="0px">
-                     </td>
-                     <td >
-                     </td>
-                     <td >
-                     </td>
-                  </tr>
-                  <tr>
-                     <td width="45%" >
-                        <otto style="color:#555; text-shadow: 1px 1px 1px green">
-                           <left>Speed</left>
-                        </otto>
-                     </td>
-                     <td width="0%" >
-                     </td>
-                     <td width="100%">
-                        <center>
-                           <div id="progressBar1" class="round-pink1">
-                              <div style="float:left;"></div>
-                           </div>
-                        </center>
-                     </td>
-                  <tr>
-                  <tr>
-                     <td>
-                        <otto style="color:#555; text-shadow: 1px 1px 1px yellow">
-                           <left>Cadence</left>
-                        </otto>
-                     </td>
-                     <td>
-                     </td>
-                     <td>
-                        <center>
-                           <div id="progressBar2" class="round-pink2">
-                              <div style="float:left;"></div>
-                           </div>
-                        </center>
-                     </td>
-                  <tr>
-                  <tr>
-                     <td>
-                        <otto style="color:#555; text-shadow: 1px 1px 1px red">
-                           <left>Electric Power</left>
-                        </otto>
-                     </td>
-                     <td>
-                     </td>
-                     <td>
-                        <center>
-                           <div id="progressBar3" class="round-pink3">
-                              <div style="float:left;"></div>
-                           </div>
-                        </center>
-                     </td>
-                  <tr>
-               </table>
+               <center>
+                  <div id="progressBar2" class="round-pink2">
+                     <div></div>
+                  </div>
+               </center>
+            </td>
+         </tr>
+         <tr>
+            <td style="padding-top: 0px; padding-bottom: 0px">
+               <otto style="color:red">
+                  <center>Electric Power</center>
+               </otto>
+            </td>
+         </tr>
+         <!-- progress bar -->
+         <tr>
+            <td>
+               <center>
+                  <div id="progressBar3" class="round-pink3">
+                     <div></div>
+                  </div>
+               </center>
             </td>
          </tr>
          <tr>
@@ -139,9 +119,9 @@
             <tr>
                <th style="padding:0px 0px;"></th>
                <td><span id="avgTime">Avg</span></td>
-               <td><span id="avgSpeed" style="vertical-align: bottom">0 </span> <font style="font-size: 8px;opacity: .8; background-color: transparent;">kmh</font></td>
+               <td><span id="avgSpeed" style="vertical-align: bottom">0 </span> <font style="font-size: 8px;opacity: .6;">kmh</font></td>
                <td><span id="avgCadence">0</span></td>
-               <td><span id="avgElectric" style="vertical-align: bottom">0 </span><font style="font-size: 8px;opacity: .8;background-color: transparent;">W</font></td>
+               <td><span id="avgElectric" style="vertical-align: bottom">0 </span><font style="font-size: 8px;opacity: .6;">W</font></td>
             </tr>
          </tfoot>
          <tbody>
@@ -155,28 +135,28 @@
          </tbody>
       </table>
       <div style="opacity: 1;">
-         <table width="100%" cellspacing="10">
+         <table cellspacing="10">
             <tr>
-               <td style="padding-top: 5px; padding-bottom: 0px"></td>
+               <td style="padding-top: 5px; padding-bottom: 5px"></td>
             </tr>
- 
-            <tr class="blackBand" width:100%>
-               <td>
-                  eFatBikes
-                  <a href="http://www.efatbike.com.au/" target="_blank"><img src="pics/arrow2.jpg"  height="15"> </a>
-                  SydneyStartups
-                  <a href="http://www.sydneystartups.com.au/" target="_blank"><img src="pics/arrow2.jpg"  height="15"> </a>
+            <tr>
+               <td width="95"  valign="center" 
+                  align="center" background="pics/bgimage7.jpg" 
+                  style="background-repeat:no-repeat;background-position:left;box-shadow: 3px 3px 10px 5px #000;border-radius: 10px;border: 2px solid #555;">
+                  <a href="http://www.efatbike.com.au/" target="_blank">eFatBikes...</a>
+               </td>
+               <td width="105" rowspan="3" valign="center" 
+                  align="center" background="pics/bgimage7.jpg" 
+                  style="background-repeat:no-repeat;background-position:left;box-shadow: 3px 3px 10px 5px #000;border-radius: 10px;border: 2px solid #555;">
+                  <a href="http://www.sydneystartups.com.au/" target="_blank">Sydney Startups</a>
                </td>
             </tr>
          </table>
       </div>
-      <!-- ############################################################# -->
-      <!-- ############################################################# -->
-      <!-- ############################################################# -->
-      <!-- ############################################################# -->
       <!-- zepto -->
       <script src=js/zepto.min.js></script>
       <script src=js/fx.js></script>
+      <script src=js/hammer.js></script>
       <script>
          var con=document.getElementById('bodyID');
          
@@ -222,12 +202,14 @@
          
          
          
-         // update the progress bars 
-         //this will repeat every x seconds
+         
          function time1( )
          {
+           //this will repeat every 5 seconds
+           //you can reset counter here
            dist = 2;
-         
+           
+           
            for (var i in val) 
            {
              //alert(array[i]);
@@ -314,7 +296,6 @@
            
           // attend to the cadence
            xxx = 100 + Math.floor((Math.random() * 40) + 1);
-         if(reset){xxx = 0};
            sumVars[2] += xxx;
            avgVars[2] = Math.round(sumVars[2] / seconds);
            $('#liveCadence').html(xxx);
@@ -323,7 +304,6 @@
             
           // attend to the electric
            xxx = 100 + Math.floor((Math.random() * 100) + 1);
-         if(reset){xxx = 0};
            sumVars[3] += xxx;
            avgVars[3] = Math.round(sumVars[3] / seconds);
            $('#liveElectric').html(xxx + ' ');

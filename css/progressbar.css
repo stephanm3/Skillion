@@ -24,7 +24,7 @@
 
 .round-pink3 div {
 	background: -webkit-linear-gradient(top, #FF3030, #4C0000);
-	background: -webkit-gradient(ease, 0% 0%, 0% 100%, from(#FF3030), to(#4C0000)); 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FF3030), to(#4C0000)); 
 
 }
 
@@ -34,17 +34,20 @@
 
 
 #progressBar1, #progressBar2, #progressBar3{
-        width: 250px;
-        height: 18px;
+        width: 85%;
+        height: 16px;
         border: 1px solid #111;
-        background-color: #292929;
+        background-color: #666;
 }
  
 #progressBar1 div, #progressBar2 div, #progressBar3 div{
         height: 100%;
-        color: #fff;
+        color: #ddd;
+		font-family: Comic Sans MS;
+		font-weight: normal;		
+		
         text-align: right;
-        line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+        line-height: 18px; /* same as #progressBar height if we want text middle aligned */
         width: 0;
         background-color: #0099ff;
 }
