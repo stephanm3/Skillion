@@ -94,7 +94,7 @@ text3d1 {
         margin-top: 0;
         font-family: 'Lobster', helvetica, arial;
 		
-		<!-- vertically align -->
+		/* vertically align */
 		 position: relative;
          top: 50%;
         -webkit-transform: translateY(-50%);
@@ -132,8 +132,9 @@ data {
 
 
 h5 {
-   color: white;  /* Fallback: assume this color ON TOP of image */
-   background: pics/arrow1.jpg no-repeat;
+   color: white;  
+   
+   background-image: pics/arrow1.jpg no-repeat;
    /* background: url(images/fire.jpg) no-repeat;*/
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
@@ -147,8 +148,16 @@ h5 {
 	margin-top: 20px;
 	width:82%;
     text-align:center;
-	background: -webkit-linear-gradient(left, #eee , #ddf, #eee);
+	background-image: -webkit-linear-gradient(left, #eee , #ddf, #eee); 
 
+	/* background:-webkit-gradient(
+        linear,
+        left bottom, middle top, right top,
+        color-stop(0.39, rgb(189,189,189)),
+        color-stop(0.7, rgb(224,224,224))
+        color-stop(0.39, rgb(189,189,189)),
+        );
+	*/
     box-shadow: 10px 25px 35px #68a;
 	
 
@@ -170,7 +179,7 @@ h5 {
 	
 
     text-align:center;
-	background: -webkit-linear-gradient(left, #000 , #000, #000);
+	background-color: #000;
 
     box-shadow: 10px 25px 35px #666;
 	
