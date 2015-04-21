@@ -1,5 +1,5 @@
 .round-pink1, .round-pink2, .round-pink3 {
-	border-radius: 10px;
+	border-radius: 9px;
 	background: #e6e5e2;	
 	box-shadow: 0 -1px 1px #c0bfbc inset;
 }
@@ -35,7 +35,7 @@
 
 #progressBar1, #progressBar2, #progressBar3{
         width: 85%;
-        height: 16px;
+        height: 12px;
         border: 1px solid #111;
         background-color: #666;
 }
@@ -45,9 +45,9 @@
         color: #ddd;
 		font-family: Comic Sans MS;
 		font-weight: normal;		
-		
+		font-size: 12px;		
         text-align: right;
-        line-height: 18px; /* same as #progressBar height if we want text middle aligned */
+        line-height: 12px; /* same as #progressBar height if we want text middle aligned */
         width: 0;
         background-color: #0099ff;
 }

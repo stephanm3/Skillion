@@ -8,12 +8,12 @@ h3 {
 
 otto {
 
-  font-size: 18px;
+  font-size: 16px;
   font-family: Comic Sans MS;
   font-weight: normal;
   color:#555;
   color: red;   
-    margin-top: 20px;
+    margin-top: 3px;
 
   text-shadow: 1px 1px 1px #555,
              
@@ -81,10 +81,11 @@ otto {
  */  
      background:-webkit-gradient(
         linear,
-        left bottom,
         left top,
-        color-stop(0.7, rgb(189,189,189)),
-        color-stop(0.39, rgb(224,224,224))
+		left bottom,
+        color-stop(0.1, rgb(70,70,70)),
+        color-stop(0.39, rgb(100,100,100)),
+		color-stop(0.9, rgb(180,180,180))
         );      
 
   text-shadow: 0 1px 0 #ccc,
