@@ -1,3 +1,4 @@
+SetKeyDelay, 100
 Run, cmd
 WinWait, Administrator: C:\windows\system32\cmd.exe, 
 IfWinNotActive, Administrator: C:\windows\system32\cmd.exe, , WinActivate, Administrator: C:\windows\system32\cmd.exe, 
